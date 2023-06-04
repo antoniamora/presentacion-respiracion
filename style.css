@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "PermanentMarker";
+    src: url(PermanentMarker-Regular.ttf);
+  }
+
+body {
+    background-color: rgb(255, 115, 0);
+    font-family: "PermanentMarker";
+     text-align: center;
+     overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+ul {
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: purple;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+    border: 3px solid purple;
+    position: relative;
+    z-index: 1;
+    font-family: "PermanentMarker";
+}
+
+button:hover {
+    background-color: rgb(184, 107, 184);
+    cursor:pointer;
+}
+
+button::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: purple;
+}
+
+arriba {
+    padding-top: 5000px;
+}
