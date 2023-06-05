@@ -44,3 +44,40 @@ function habilitador (num) {
     sig.disabled = false;
   }
 }
+
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowRight') {
+    cambiarSiguiente();
+  } else if (event.key === 'ArrowLeft') {
+    cambiarAnterior();
+  }
+});
+
+function cambiarSiguiente() {
+  if (!A.hidden) {
+    cambiar(B);
+  } else if (!B.hidden) {
+    cambiar(C);
+  } else if (!C.hidden) {
+    cambiar(D);
+  } else if (!D.hidden) {
+    cambiar(E);
+  } else if (!E.hidden) {
+    // No realizar cambio, ya que E es el último elemento
+  }
+}
+
+function cambiarAnterior() {
+  if (!A.hidden) {
+    // No realizar cambio, ya que A es el primer elemento
+  } else if (!B.hidden) {
+    cambiar(A);
+  } else if (!C.hidden) {
+    cambiar(B);
+  } else if (!D.hidden) {
+    cambiar(C);
+  } else if (!E.hidden) {
+    cambiar(D);
+  }
+}
